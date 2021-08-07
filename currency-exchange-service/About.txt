@@ -1,0 +1,4 @@
+Currency Conversion Service
+This service has details of conversion rate for various currencies.
+Input is from currency and to currency
+It returns the conversion rate. Eg input USD to INR : Returns rate of 65
