@@ -1,0 +1,7 @@
+Currency Conversion Service
+
+Using rest  Template
+http://localhost:8100/currency-conversion/from/USD/to/INR/quantity/10
+
+Using feign client
+http://localhost:8100/currency-conversion-feign/from/USD/to/INR/quantity/10
