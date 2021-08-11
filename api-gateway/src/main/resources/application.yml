@@ -1,0 +1,56 @@
+#spring:
+#  cloud:
+#    gateway:
+#      routes:   #To set redirection to a particular service based on url pattern
+#        - id: CURRENCY-EXCHANGE
+#          uri: lb://CURRENCY-EXCHANGE  #lb => Load balance
+#          predicates:
+#            - Path=/exchange/**
+#        - id: CURRENCY-CONVERSION
+#          uri: lb://CURRENCY-CONVERSION
+#          predicates:
+#            - Path=/conversion/**
+
+
+server:
+  port: 8765
+spring:
+  application:
+    name:api-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+#          enabled: true
+#          lower-case-service-id: true
+        routes:   #To set redirection to a particular service based on url pattern
+          - id: CURRENCY-EXCHANGE
+            uri: lb://currency-exchange  #lb => Load balance
+            predicates:
+              - Path=/exchange/**
+          - id: CURRENCY-CONVERSION
+            uri: lb://currency-conversion
+            predicates:
+              - Path=/conversion/**
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+
+
+#  spring:
+#    cloud:
+#      gateway:
+#        routes:   #To set redirection to a particular service based on url pattern
+#          - id: CURRENCY-EXCHANGE
+#            uri: lb://currency-exchange  #lb => Load balance
+#            predicates:
+#              - Path=/exchange/**
+#          - id: CURRENCY-CONVERSION
+#            uri: lb://currency-conversion
+#            predicates:
+#              - Path=/conversion/**
+
+  #http://localhost:8765/currency-conversion/currency-conversion/from/USD/to/INR/quantity/10
