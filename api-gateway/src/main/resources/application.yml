@@ -12,37 +12,37 @@
 #            - Path=/conversion/**
 
 
-server:
-  port: 8765
-spring:
-  application:
-    name:api-gateway
-  cloud:
-    gateway:
-      discovery:
-        locator:
-#          enabled: true
-#          lower-case-service-id: true
-        routes:   #To set redirection to a particular service based on url pattern
-          - id: CURRENCY-EXCHANGE
-            uri: lb://currency-exchange  #lb => Load balance
-            predicates:
-              - Path=/exchange/**
-          - id: CURRENCY-CONVERSION
-            uri: lb://currency-conversion
-            predicates:
-              - Path=/conversion/**
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka
 
 
 
 #  spring:
 #    cloud:
 #      gateway:
+#        routes:   #To set redirection to a particular service based on url pattern
+#          - id: currency-exchange
+#            uri: lb://currency-exchange  #lb => Load balance
+#            predicates:
+#              - Path=/currency-exchange/**
+#          - id: currency-conversion
+#            uri: lb://currency-conversion
+#            predicates:
+#              - Path=/currency-conversion/**
+
+  #http://localhost:8765/currency-conversion/currency-conversion/from/USD/to/INR/quantity/10
+
+################################
+#Actual one down below
+#server:
+#  port: 8765
+#spring:
+#  application:
+#    name: api-gateway
+#  cloud:
+#    gateway:
+#      discovery:
+#        locator:
+#        #          enabled: true
+#        #          lower-case-service-id: true
 #        routes:   #To set redirection to a particular service based on url pattern
 #          - id: CURRENCY-EXCHANGE
 #            uri: lb://currency-exchange  #lb => Load balance
@@ -52,5 +52,8 @@ eureka:
 #            uri: lb://currency-conversion
 #            predicates:
 #              - Path=/conversion/**
-
-  #http://localhost:8765/currency-conversion/currency-conversion/from/USD/to/INR/quantity/10
+#
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka
