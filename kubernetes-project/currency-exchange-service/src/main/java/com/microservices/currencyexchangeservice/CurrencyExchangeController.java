@@ -39,7 +39,7 @@ public class CurrencyExchangeController {
 		//CHANGE-KUBERNETES
 		//To record the pod name for each request.
 		String host = environment.getProperty("HOSTNAME");
-		String version = "v11";
+		String version = "v12";
 		
 		currencyExchange.setEnvironment(port + " " + version + " " + host);
 		
