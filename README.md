@@ -2,8 +2,8 @@
 #Title: Currency conversion and exchange services implemented using Spring cloud microservices
 
 Currency conversion service implemented using Spring boot microservices. It has 2 microservices:
-       1) currency-exchange: To fetch the exchange rate for each currency (eg: from AUD to USD) from associated database
-       2) Currency-conversion: It uses the exchange rate fetched from currency-exchange service to convert the input currency amount to required currency.
+        1) currency-exchange: To fetch the exchange rate for each currency (eg: from AUD to USD) from associated database
+        2) Currency-conversion: It uses the exchange rate fetched from currency-exchange service to convert the input currency amount to required currency.
        
 
  
