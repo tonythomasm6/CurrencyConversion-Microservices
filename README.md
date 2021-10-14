@@ -40,7 +40,7 @@ Currency conversion service implemented using Spring boot microservices. It has 
 <b>Services created with public IP to access the service.</b>
       ![image](https://user-images.githubusercontent.com/68453981/136790590-f5fe7107-a614-4848-8d99-6c0397926893.png)
 
-<b>Application running using the public port  </b>
+<b>Application running using the public IP  </b>
 ![image](https://user-images.githubusercontent.com/68453981/136792238-124e6da8-1ab2-4304-8ac5-b9ff5ddd992c.png)
       
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
